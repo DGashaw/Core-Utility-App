@@ -99,5 +99,24 @@ that calculates the final score, regardless of the UI)
 * __Contribution:__ Feel free to suggest improvements, especially regarding new features or optimized UI flows. We are using the best practices: 
 all major logic must reside in the __Model/Service Layer__, never directly in the UI code  
 
+# 🗄️ Core Utility App - CUA Data Model  
+```mermaid
+erDiagram
+    users ||--o{ history : has
+    users {
+        integer user_id PK
+        string user_name
+        date created_at
+    }
+    history {
+        integer history_id PK
+        integer user_id FK
+        string history_name
+        integer history_value
+        date updated_at
+        boolean history_deleted
+    }
+```
+
 # Final Words  
 The app is developed with 🔥 PyQt6 and Professional Architecture Principles.

@@ -6,3 +6,4 @@ class CuaSignal(QObject):
     """
     increment = pyqtSignal(int)
     decrement = pyqtSignal(int)
+    save_data = pyqtSignal(tuple)
